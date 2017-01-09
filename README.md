@@ -8,10 +8,35 @@ NB: Ce projet a été réalisé dans le cadre des cours de programmation Réseau
 
 Afin de compiler ce programme, je vous recommande l'utilisation de l'**IDE IntelliJ IDEA** (Gratuit pour les étudiants !)
 
+Le main se situe dans le fichier `WebServer.java`
+
 Une **JavaDoc** détaillée est disponible dans le dossier doc/, en ouvrant le fichier index.html.
 
 Le code peut s'avérer complexe pour quelqu'un n'ayant pas l'habitude du Java. Néanmoins, j'ai tenté de commenter ce qui me semblait délicat.
 Il n'y a pas qu'une manière de réaliser un serveur HTTP sous java, ni même de limite dans la complexité qu'on peut atteindre.
+
+## Concept de réalisation
+
+Ce serveur est réalisé selon plusieurs concepts. Le plus important étant d'attribuer à chaque méthode HTTP implémentée (GET, POST, PUT, DELETE...) une classe qui lui est propre.
+
+Ces classes héritent toutes de la classe abstraite `Method`, qui centralise et généralise des fonctionnalités nécessaires pour la plupart des méthodes HTTP.
+
+Petit rappel, une transaction HTTP (à mon sens) = une connexion au serveur, envoi de la requête, attente de la réponse, réception de la réponse, fermeture de la connexion.
+
+Ainsi, on peut résumer une transaction avec le serveur de la manière suivante :
+
+1. Le client établit une connexion avec le serveur (Protocole TCP, Socket)
+2. Le serveur accepte la connexion, crée un objet pour représenter le client et lance un thread dédié pour la transaction du client. Ce thread est chargé d'interpréter la requête du client, et de lui répondre.
+3. Le Thread dédié appelle les méthodes permettant de traiter l'entête de la requête. Il utilise alors une _factory_ * pour récupérer l'objet associé à la méthode utilisée par le client.
+4. La méthode est exécutée. Le comportement varie en fonction de chaque classe enfant de `Method`.
+5. Le Thread met fin à la transaction, puis s'interrompt.
+
+\* Factory: en gros, une usine à objet, en fonction de la chaîne de caractère, fournit l'objet correspondant: get -> Objet `Get` généré, etc.
+
+## Sens de lecture recommandé
+
+De manière personnelle, je vous recommande de lire le code en mode "Top-down", en commençant par le fichier `WebServer.java`.
+Ensuite, entammez le fichier `TransactionThread.java`, puis enfin `Client.java` et les classes Méthodes.
 
 ## Questions ? Suggestions ?
 
