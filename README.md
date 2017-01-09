@@ -28,7 +28,7 @@ Ainsi, on peut résumer une transaction avec le serveur de la manière suivante 
 1. Le client établit une connexion avec le serveur (Protocole TCP, Socket)
 2. Le serveur accepte la connexion, crée un objet pour représenter le client et lance un thread dédié pour la transaction du client. Ce thread est chargé d'interpréter la requête du client, et de lui répondre.
 3. Le Thread dédié appelle les méthodes permettant de traiter l'entête de la requête. Il utilise alors une _factory_ * pour récupérer l'objet associé à la méthode utilisée par le client.
-4. La méthode est exécutée. Le comportement varie en fonction de chaque classe enfant de `Method`.
+4. La méthode est exécutée. Le comportement varie en fonction de chaque classe.
 5. Le Thread met fin à la transaction, puis s'interrompt.
 
 \* Factory: en gros, une usine à objet, en fonction de la chaîne de caractère, fournit l'objet correspondant: get -> Objet `Get` généré, etc.
