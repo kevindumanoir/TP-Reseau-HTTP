@@ -15,7 +15,7 @@ Une **JavaDoc** détaillée est disponible dans le dossier doc/, en ouvrant le f
 Le code peut s'avérer complexe pour quelqu'un n'ayant pas l'habitude du Java. Néanmoins, j'ai tenté de commenter ce qui me semblait délicat.
 Il n'y a pas qu'une manière de réaliser un serveur HTTP sous java, ni même de limite dans la complexité qu'on peut atteindre.
 
-## Concept de réalisation
+## Concepts de réalisation
 
 Ce serveur est réalisé selon plusieurs concepts. Le plus important étant d'attribuer à chaque méthode HTTP implémentée (GET, POST, PUT, DELETE...) une classe qui lui est propre.
 
@@ -32,6 +32,8 @@ Ainsi, on peut résumer une transaction avec le serveur de la manière suivante 
 5. Le Thread met fin à la transaction, puis s'interrompt.
 
 \* Factory: en gros, une usine à objet, en fonction de la chaîne de caractère, fournit l'objet correspondant: get -> Objet `Get` généré, etc.
+
+J'expliquerai en détail (et si le temps me le permet) le fonctionnement de certaines méthodes de la classe `Client` qui peuvent paraître un peu obscur. Néanmoins, lancez le code, fouinez, vous trouverez :-P
 
 ## Sens de lecture recommandé
 
