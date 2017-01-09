@@ -12,8 +12,8 @@ Le main se situe dans le fichier `WebServer.java`
 
 Une **JavaDoc** détaillée est disponible dans le dossier doc/, en ouvrant le fichier index.html.
 
-Le code peut s'avérer complexe pour quelqu'un n'ayant pas l'habitude du Java. Néanmoins, j'ai tenté de commenter ce qui me semblait délicat.
-Il n'y a pas qu'une manière de réaliser un serveur HTTP sous java, ni même de limite dans la complexité qu'on peut atteindre.
+**ATTENTION** - Le code peut s'avérer complexe pour quelqu'un n'ayant pas l'habitude du Java. Néanmoins, j'ai tenté de commenter ce qui me semblait délicat.
+**Il n'y a pas qu'une manière de réaliser un serveur HTTP sous java, ni même de limite dans la complexité qu'on peut atteindre.**
 
 ## Concepts de réalisation
 
