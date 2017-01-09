@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bonjour !</title>
+  <meta charset="utf-8">
+	<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<style type="text/css">
+body {
+  padding-top: 50px;
+}
+.starter-template {
+  padding: 40px 15px;
+  text-align: center;
+}
+</style>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">TP HTTP</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="/">Accueil</a></li>
+            <li class="active"><a href="#">Page n°2</a></li>
+            <li><a href="request.html">Page Request</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+
+      <div class="starter-template">
+        <h1>Envoi de formulaire</h1>
+		<div class="well">
+		<h3>Envoi d'un formulaire POST</h3>
+		<form action="request.html" method="post">
+    <div class="form-group">
+      <input class="form-control" type="text" name="post1" placeholder="Entrez un message...">
+    </div>
+    <div class="form-group">
+      <input class="form-control" type="text" name="post2" placeholder="Entrez un 2e message...">
+    </div>
+			<button class="btn btn-success" type="submit">Envoyer</button>
+		</form>
+		
+		<h3>Envoi d'un formulaire GET</h3>
+		<form action="request.html" method="get">
+    <div class="form-group">
+			<input class="form-control" type="text" name="get1" placeholder="Entrez un message...">
+    </div>
+    <div class="form-group">
+      <input class="form-control" type="text" name="get2" placeholder="Entrez un 2e message...">
+    </div>
+			<button class="btn btn-success" type="submit">Envoyer</button>
+		</form>
+		</div>
+      </div>
+
+    </div><!-- /.container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+<script src="bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>
