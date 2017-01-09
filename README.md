@@ -54,7 +54,7 @@ Ensuite, entammez le fichier `TransactionThread.java`, puis enfin `Client.java` 
 
 ## Questions ? Suggestions ?
 
-N'hésitez pas à m'envoyer un mail à l'adresse suivante pour n'importe quelle question sur le code: kevin.dumanoir@insa-lyon.fr
+N'hésitez pas à m'envoyer un mail à l'adresse suivante pour n'importe quelle question sur le code: kevin.dumanoir [@t] insa-lyon.fr
 
 Je tenterai de répondre avec détail à vos interrogations ou vos suggestions par rapport au code. Comme je l'ai dis précédemment, il n'y a pas qu'une manière de faire, si quelque chose vous bloque, admettez le (ou demandez-moi) et revenez dessus plus tard ;-)
 
