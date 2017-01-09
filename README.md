@@ -19,6 +19,8 @@ Une **JavaDoc** détaillée est disponible dans le dossier doc/, en ouvrant le f
 
 Ce serveur est réalisé selon plusieurs concepts. Le plus important étant d'attribuer à chaque méthode HTTP implémentée (GET, POST, PUT, DELETE...) une classe qui lui est propre.
 
+### Transaction HTTP et Méthodes
+
 Ces classes héritent toutes de la classe abstraite `Method`, qui centralise et généralise des fonctionnalités nécessaires pour la plupart des méthodes HTTP.
 
 Petit rappel, une transaction HTTP (à mon sens) = une connexion au serveur, envoi de la requête, attente de la réponse, réception de la réponse, fermeture de la connexion.
@@ -33,11 +35,15 @@ Ainsi, on peut résumer une transaction avec le serveur de la manière suivante 
 
 \* Factory: en gros, une usine à objet, en fonction de la chaîne de caractère, fournit l'objet correspondant: get -> Objet `Get` généré, etc.
 
+### Entêtes de réponse
+
 Les entêtes de réponses répondent tous à la même logique: d'abord un message de statut (HTTP/1.1 200 OK - 404 Not Found ...) puis ensuite des données supplémentaires permettant la bonne gestion des données envoyées.
 
 Ces messages de statut, étant scrupuleusement définis par le [W3C](https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html), sont représentés sous la forme d'un enumérable (coucou Thomas) nommé `ResponseType`.
 
 Il n'y a rien de très compliqué dans cette classe, gardez juste en tête qu'elle permet d'avoir qu'une liste particulière d'objets accessibles assez simplement dans le code (Vive les enums !)
+
+### Traitement de l'en-tête, queryString...
 
 J'expliquerai en détail (et si le temps me le permet) le fonctionnement de certaines méthodes de la classe `Client` qui peuvent paraître un peu obscur. Néanmoins, lancez le code, fouinez, vous trouverez :-P
 
