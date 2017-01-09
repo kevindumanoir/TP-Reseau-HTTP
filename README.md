@@ -33,9 +33,9 @@ Ainsi, on peut résumer une transaction avec le serveur de la manière suivante 
 
 \* Factory: en gros, une usine à objet, en fonction de la chaîne de caractère, fournit l'objet correspondant: get -> Objet `Get` généré, etc.
 
-Les entêtes de réponses répondent tous à la même logique: d'abord un message de status (HTTP/1.1 200 OK - 404 Not Found ...) puis ensuite des données supplémentaires permettant la bonne gestion des données envoyées.
+Les entêtes de réponses répondent tous à la même logique: d'abord un message de statut (HTTP/1.1 200 OK - 404 Not Found ...) puis ensuite des données supplémentaires permettant la bonne gestion des données envoyées.
 
-Ces messages de status, étant scrupuleusement définis par le [W3C](https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html), sont représentés sous la forme d'un enumérable (coucou Thomas) nommé `ResponseType`.
+Ces messages de statut, étant scrupuleusement définis par le [W3C](https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html), sont représentés sous la forme d'un enumérable (coucou Thomas) nommé `ResponseType`.
 
 Il n'y a rien de très compliqué dans cette classe, gardez juste en tête qu'elle permet d'avoir qu'une liste particulière d'objets accessibles assez simplement dans le code (Vive les enums !)
 
